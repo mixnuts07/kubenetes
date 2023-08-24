@@ -65,8 +65,12 @@
 
 - kubectl can operate on multiple environments with multiple permissions by switching contexts(cluster, user, namespace) in the kubeconfig file.
 
-create resource
-
 ```
+minikube start
+<!-- create resource -->
 kubectl create -f sample.yml
+<!-- delete resource -->
+kubectl delete -f sample.yml
+<!-- update resource -->
+kubectl apply -f sample.yml
 ```
