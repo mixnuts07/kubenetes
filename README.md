@@ -60,3 +60,13 @@
   - HorizontalPodAutoscaler
   - PodDisruptionBudget
   - CustomResourceDefinition
+
+### 4-sec
+
+- kubectl can operate on multiple environments with multiple permissions by switching contexts(cluster, user, namespace) in the kubeconfig file.
+
+create resource
+
+```
+kubectl create -f sample.yml
+```
