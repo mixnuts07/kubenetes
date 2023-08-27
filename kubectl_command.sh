@@ -39,3 +39,6 @@ kubectl cp sample-pod:/etc/hostname .
 kubectl apply -f sample-pod.yaml # create sample-pod
 kubectl port-forward sample-pod  8080:80 # local:8080, container:80
 curl -I localhost:8080 # HTTP/1.1 200 OK
+# debug(-v=6~)
+kubectl -v=6 get nodes # Request, Response
+kubectl -v=8 get nodes # Request Body, Response Body
