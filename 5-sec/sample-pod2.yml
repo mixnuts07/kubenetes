@@ -1,0 +1,12 @@
+# 2つのコンテナを内包したPod
+# Pod内ではコンテナはIPアドレスを共有しているため、同じポートをバインドするコンテナは起動できない
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-pod
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.12
+    - name: redis-container
+      image: redis:3.2

@@ -21,7 +21,7 @@
 
 ## Resources(5)
 
-- Workloads(8)
+- Workloads(8)...Resources for container execution on cluster.
   - Pod
   - ReplicationController
   - ReplicaSet
@@ -69,5 +69,7 @@
 
   - annotations ... system component(memo notes for resources)
   - labels ... resources(segregate resources)
+
+### 5-sec
 
 - Workloads
