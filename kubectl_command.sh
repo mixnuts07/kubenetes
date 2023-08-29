@@ -29,6 +29,9 @@ kubectl describe pod sample-pod
 kubectl -n kube-system top node --containers
 # execution on pod
 kubectl exec -it sample-pod /bin/bash
+# exec ls command on container
+kubectl exec -it sample-pod ls
+kubectl exec -it sample-pod -c CONTAINER_NAME ls
 # check logs pod
 kubectl logs sample-pod
 # check logs all pods(partial match)
