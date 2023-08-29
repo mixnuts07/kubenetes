@@ -45,3 +45,7 @@ curl -I localhost:8080 # HTTP/1.1 200 OK
 # debug(-v=6~)
 kubectl -v=6 get nodes # Request, Response
 kubectl -v=8 get nodes # Request Body, Response Body
+# replica set
+kubectl get replicasets -o wide
+# pod history
+kubectl describe rs SAMPLE_POD
