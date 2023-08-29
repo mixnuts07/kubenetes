@@ -23,7 +23,9 @@
 
 - Workloads(8)...Resources for container execution on cluster.
   - Pod
+    - The smallest unit for Workloads, with one or more containers.
   - ReplicationController
+    - Create replicas of Pods and continue to maintain a specified number of Pods or more.
   - ReplicaSet
   - Deployment
   - DaemonSet
