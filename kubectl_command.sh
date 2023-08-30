@@ -47,5 +47,9 @@ kubectl -v=6 get nodes # Request, Response
 kubectl -v=8 get nodes # Request Body, Response Body
 # replica set
 kubectl get replicasets -o wide
+# scaling replicas
+sed -e `s|replicas: 3|replicas: 5|` sample-pod.yml | kubectl apply -f - replicaset.apps "sample-rs" configured
+# scaling replicas
+kubectl scale rs sample-rs --replicas 5
 # pod history
 kubectl describe rs SAMPLE_POD
