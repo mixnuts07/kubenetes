@@ -27,6 +27,7 @@
   - ReplicaSet (ReplicationController)
     - Create replicas of Pods and continue to maintain a specified number of Pods or more.
   - Deployment
+    - manages multiple ReplicaSets, rolling updates, rollbacks, etc.
   - DaemonSet
   - StatefulSet
   - Job

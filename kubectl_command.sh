@@ -55,3 +55,11 @@ kubectl scale rs sample-rs --replicas 5
 kubectl delete replicaset sample-rs
 # pod history
 kubectl describe rs SAMPLE_POD
+# create deployment (--recodr...アップデート時の履歴を保持することができる）
+kubectl apply -f sample-deployment.yaml --record
+# get replicas
+kubectl get replicasets -o yaml | head
+# get deployment
+kubectl get deployments
+# delete deployment
+kubectl delete deployment sample-deployment
