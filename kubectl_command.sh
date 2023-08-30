@@ -51,5 +51,7 @@ kubectl get replicasets -o wide
 sed -e `s|replicas: 3|replicas: 5|` sample-pod.yml | kubectl apply -f - replicaset.apps "sample-rs" configured
 # scaling replicas
 kubectl scale rs sample-rs --replicas 5
+# delete replicaset pods
+kubectl delete replicaset sample-rs
 # pod history
 kubectl describe rs SAMPLE_POD
