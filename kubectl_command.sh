@@ -63,3 +63,21 @@ kubectl get replicasets -o yaml | head
 kubectl get deployments
 # delete deployment
 kubectl delete deployment sample-deployment
+# update containr image deployments
+kubectl set image deployment SAMPLE_DEPLOYMENT CONTAINER_NAME=nginx:1.13
+# check deployment update 
+kubectl rollout status deployment SAMPLE_DEPLOYMENT
+# check change history
+kubectl rollout history deployment SAMPLE_DEPLOYMENT
+#　更新の一時停止
+kubectl rollout pause deployment SAMPLE_DEPLOYMENT
+#　更新の一時停止解除
+kubectl rollout resume deployment SAMPLE_DEPLOYMENT
+# display replicasets
+kubectl get replicasets --watch
+# scaling deployment with kubectl
+kubectl scale deployment SAMPLE_DEPLOYMENT --replicas=5
+# scaling deployment with manifest
+sed -e `s|replicas: 3|replicas: 5|` SAMMPLE_DEPLOYMENT.yaml | kubectl apply -f - deployment.apps "sample-deloyment" configured
+# create deployment with run
+kubectl run sample-deployement-cli --image nginx:1.12 --replicas 3 --port 80
