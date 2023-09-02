@@ -89,3 +89,8 @@ kubectl get statefulsets
 kubectl get persistentvolumeclaims
 # get PersistentVolume(永続化領域) on statefulset
 kubectl get persistentvolumes
+# scaling statefulsets
+kubectl scale statefulset SAMPLE_STATEFULSET --replicas=5
+# scaling statefulsets
+sed -e `s|replicas: 3|replicas: 5|` SAMMPLE_STATEFULSET.yaml | kubectl apply -f - statefulset.apps "sample-statefulset" configured
+
