@@ -36,6 +36,7 @@
   - Job
     - Resources that use container to perform one-time processing.(Ex. Batch)
   - CronJob
+    - Create jobs as scheduled times.
 - Discovery & LB(2)
   - Service(7)
     - ClusterIP

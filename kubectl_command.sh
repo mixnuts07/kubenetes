@@ -95,3 +95,7 @@ kubectl scale statefulset SAMPLE_STATEFULSET --replicas=5
 sed -e `s|replicas: 3|replicas: 5|` SAMMPLE_STATEFULSET.yaml | kubectl apply -f - statefulset.apps "sample-statefulset" configured
 # get jobs
 kubectl get jobs
+# get cronjob
+kubectl get cronjobs
+# create cronjob no using manifest
+kubectl run SAMPLE_CRONJOB --schedule "*/1 * * * * " --restart Never --image centos:6 -- sleep 30
