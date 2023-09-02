@@ -93,4 +93,5 @@ kubectl get persistentvolumes
 kubectl scale statefulset SAMPLE_STATEFULSET --replicas=5
 # scaling statefulsets
 sed -e `s|replicas: 3|replicas: 5|` SAMMPLE_STATEFULSET.yaml | kubectl apply -f - statefulset.apps "sample-statefulset" configured
-
+# get jobs
+kubectl get jobs

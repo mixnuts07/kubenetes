@@ -34,6 +34,7 @@
     - Similar to ReplicaSet, a resource for stateful workloads such as database.
     - Has a mechanism for persisting data.
   - Job
+    - Resources that use container to perform one-time processing.(Ex. Batch)
   - CronJob
 - Discovery & LB(2)
   - Service(7)
