@@ -22,20 +22,20 @@
 ## Resources(5)
 
 - Workloads(7)...Resources for container execution on cluster.
-  - Pod
+  - Pod（デバッグや確認用途）
     - The smallest unit for Workloads, with one or more containers.
-  - ReplicaSet (ReplicationController)
+  - ReplicaSet (ReplicationController)（Pod をスケールさせて管理。Deployment 経由で利用。）
     - Create replicas of Pods and continue to maintain a specified number of Pods or more.
-  - Deployment
+  - Deployment（スケールさせる WorkLoad に利用する）
     - manages multiple ReplicaSets, rolling updates, rollbacks, etc.
-  - DaemonSet
+  - DaemonSet（各 Node に 1 つずつ Pod を配置したいとき）
     - Similar to ReplicaSet, a resource that places one Pod on each Node.(usecase... Fluentd, Datadog)
-  - StatefulSet
+  - StatefulSet（データの永続化などステートを持つとき）
     - Similar to ReplicaSet, a resource for stateful workloads such as database.
     - Has a mechanism for persisting data.
-  - Job
+  - Job（ワークキューやタスクなどコンテナの終了が必要な WorkLoad に利用する）
     - Resources that use container to perform one-time processing.(Ex. Batch)
-  - CronJob
+  - CronJob（定期的に Job を実行したいとき）
     - Create jobs as scheduled times.
 - Discovery & LB(2)
   - Service(7)
