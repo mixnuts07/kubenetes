@@ -29,7 +29,10 @@
   - Deployment
     - manages multiple ReplicaSets, rolling updates, rollbacks, etc.
   - DaemonSet
+    - Similar to ReplicaSet, a resource that places one Pod on each Node.(usecase... Fluentd, Datadog)
   - StatefulSet
+    - Similar to ReplicaSet, a resource for stateful workloads such as database.
+    - Has a mechanism for persisting data.
   - Job
   - CronJob
 - Discovery & LB(2)
@@ -71,7 +74,3 @@
 
   - annotations ... system component(memo notes for resources)
   - labels ... resources(segregate resources)
-
-### 5-sec
-
-- Workloads

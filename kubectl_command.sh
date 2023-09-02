@@ -81,3 +81,11 @@ kubectl scale deployment SAMPLE_DEPLOYMENT --replicas=5
 sed -e `s|replicas: 3|replicas: 5|` SAMMPLE_DEPLOYMENT.yaml | kubectl apply -f - deployment.apps "sample-deloyment" configured
 # create deployment with run
 kubectl run sample-deployement-cli --image nginx:1.12 --replicas 3 --port 80
+# delete daemonset
+kubectl delete daemonset DAEMONSET_NAME
+# get statefulset
+kubectl get statefulsets
+# get PersistentVolumeClaim(PersistentVolume 要求) on statefulset
+kubectl get persistentvolumeclaims
+# get PersistentVolume(永続化領域) on statefulset
+kubectl get persistentvolumes
